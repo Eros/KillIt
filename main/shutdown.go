@@ -11,6 +11,8 @@ import (
 	"sync"
 	"os/exec"
 	"log"
+	"time"
+	"os"
 )
 
 type commandList struct {
@@ -43,5 +45,32 @@ func parallelExecute(cmd *exec.Cmd, wg *sync.WaitGroup){
 	wg.Done()
 	if err != nil {
 		log.Printf("Error starting pc %s: %s", cmd.Path, err)
+	}
+}
+
+func shutdownSequence(conf * config){
+	done := make(chan struct{})
+	c1 := new(commandList)
+	wg := new(sync.WaitGroup)
+	t := time.NewTimer(time.Duration(conf.ShutdownTimeout) * time.Millisecond)
+
+	if conf.Commands != nil {
+		go func() {
+			select {
+			case <-done:
+			case <-t.C:
+				log.Println("Timed out")
+				c1.KillAll()
+			}
+			if conf.Shutdown {
+				log.Println("Shutting down")
+				if err := shutdownNow(); err != nil {
+					log.Fatal("Error shutting down: ", err)
+				} else {
+					log.Println("Commands finished")
+					os.Exit(0)
+				}
+			}
+		}()
 	}
 }

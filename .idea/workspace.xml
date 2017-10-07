@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0705a224-fc89-40a8-a99e-29a046e3f73b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/main/shutdown.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/shutdown.go" afterPath="$PROJECT_DIR$/main/shutdown.go" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -50,10 +50,10 @@
       <file leaf-file-name="shutdown.go" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main/shutdown.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="22" column="15" lean-forward="false" selection-start-line="22" selection-start-column="15" selection-end-line="22" selection-end-column="15" />
+            <state relative-caret-position="759">
+              <caret line="45" column="4" lean-forward="false" selection-start-line="45" selection-start-column="4" selection-end-line="45" selection-end-column="4" />
               <folding>
-                <element signature="e#14#107#0" expanded="true" />
+                <element signature="e#14#114#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -216,10 +216,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main/shutdown.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="15" lean-forward="false" selection-start-line="22" selection-start-column="15" selection-end-line="22" selection-end-column="15" />
+        <state relative-caret-position="759">
+          <caret line="45" column="4" lean-forward="false" selection-start-line="45" selection-start-column="4" selection-end-line="45" selection-end-column="4" />
           <folding>
-            <element signature="e#14#107#0" expanded="true" />
+            <element signature="e#14#114#0" expanded="true" />
           </folding>
         </state>
       </provider>

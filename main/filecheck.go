@@ -7,7 +7,7 @@ import (
 
 func checkExe(path string) error {
 	_, err := exec.LookPath(path)
-	
+
 	if err != nil {
 		return err;
 	}

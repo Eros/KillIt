@@ -13,6 +13,7 @@ import (
 	"log"
 	"time"
 	"os"
+	"strings"
 )
 
 type commandList struct {
@@ -72,5 +73,27 @@ func shutdownSequence(conf * config){
 				}
 			}
 		}()
+
+		for _, command := range conf.Commands {
+			cmdParts := strings.Split(command, " ")
+			if string(cmdParts[0][0]) == "!" {
+				osCommand := exec.Command(cmdParts[0][1:], cmdParts[1:]...)
+				c1.Add(osCommand)
+				go parallelExecute(osCommand, wg)
+			} else {
+				osCommand := exec.Command(cmdParts[0], cmdParts[1:]...)
+				c1.Add(osCommand)
+				err := osCommand.Run()
+				if err != nil {
+					log.Printf("Error while running command")
+				}
+			}
+		}
+		go func (){
+			wg.Wait()
+			done <- struct{}{}
+		}()
+	} else {
+		shutdownNow()
 	}
 }

@@ -50,10 +50,10 @@
       <file leaf-file-name="shutdown.go" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main/shutdown.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="776">
-              <caret line="75" column="1" lean-forward="false" selection-start-line="75" selection-start-column="1" selection-end-line="75" selection-end-column="1" />
+            <state relative-caret-position="844">
+              <caret line="96" column="21" lean-forward="false" selection-start-line="96" selection-start-column="21" selection-end-line="96" selection-end-column="21" />
               <folding>
-                <element signature="e#14#128#0" expanded="true" />
+                <element signature="e#14#139#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -216,10 +216,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main/shutdown.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="776">
-          <caret line="75" column="1" lean-forward="false" selection-start-line="75" selection-start-column="1" selection-end-line="75" selection-end-column="1" />
+        <state relative-caret-position="844">
+          <caret line="96" column="21" lean-forward="false" selection-start-line="96" selection-start-column="21" selection-end-line="96" selection-end-column="21" />
           <folding>
-            <element signature="e#14#128#0" expanded="true" />
+            <element signature="e#14#139#0" expanded="true" />
           </folding>
         </state>
       </provider>
